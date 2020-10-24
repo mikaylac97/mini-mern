@@ -1,0 +1,258 @@
+@media (min-width: 992px) {
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}
+}
+.Landing {
+    font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.container {
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 50px;
+  font-family: Catamaran,Helvetica,Arial,sans-serif;
+  font-weight: 200;;
+}
+
+
+hr {
+  max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: rgba(34,34,34,.1);
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+#mainNav {
+  border-color: rgba(34,34,34,.05);
+    background-color: #fff;
+    transition: all .35s;
+    font-family: Catamaran,Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: white;
+    background: url('./bg-pattern.png'), #7b4397;
+    background: url('./bg-pattern.png'), linear-gradient(to left, #7b4397, #dc2430);
+    /* background: url('./best-spotify-playlists.jpg') */
+  }
+
+  header.masthead .header-content {
+    max-width: 500px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  header.masthead .header-content h1 {
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  header.masthead .device-container {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  header.masthead .device-container img {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 992px) {
+    header.masthead {
+      height: 100vh;
+      min-height: 775px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    header.masthead .header-content {
+      margin-bottom: 0;
+      text-align: left;
+    }
+    header.masthead .header-content h1 {
+      font-size: 40px;
+    }
+    /* header.masthead .device-container {
+        max-width: 325px;
+      } */
+  }
+
+  .device-mockup {
+    position: relative;
+    width: ;
+  }
+
+  .landing-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 20px 40px;
+    transition: 0.5s ease;
+    color: white;
+  }
+
+  .landing-btn:hover{
+    background-color: white;
+    color: gray;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+  section.powered-spotify {
+    position: relative;
+    padding: 150px 0;
+  }
+
+  .bg-primary {
+    background: linear-gradient(#fdcc52,#fdc539);
+  }
+
+  .logos img {
+    width: 20vw;
+    margin: 20px 20px;
+  }
+
+  section.powered-spotify h2 {
+    font-size: 50px;
+    margin-bottom: .5rem;
+  }
+
+  section.features .section-heading {
+    margin-bottom: 100px;
+  }
+
+  section.features .feature-item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+  section.features .feature-item i {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 15px;
+    background: linear-gradient(to left,#7b4397,#dc2430);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  section.cta {
+    position: relative;
+    padding: 250px 0;
+    background-image: url(./concert2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  section.cta .cta-content h2 {
+    font-size: 80px;
+    max-width: 600px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #fff;
+    font-family: Catamaran,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+  section.cta .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.contact {
+  text-align: center;
+}
+
+section.contact h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+section.contact ul.list-social li a {
+  font-size: 50px;
+  line-height: 80px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  border-radius: 100%;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  color: rgba(255,255,255,.3);
+  background-color: #222;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 0;
+}
+
