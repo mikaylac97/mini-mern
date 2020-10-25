@@ -24,7 +24,7 @@ export default class Details extends Component {
     getSinglePlaylist = () => {
         const { params } = this.props.match;
         axios
-            .get(`http://localhost:8080/api/playlists/${params.id}`)
+            .get(`http://localhost:8080/api/playlists/${params.id}`, { withCredentials: true })
             .then(responseFromAPI => {
                 console.log(responseFromAPI.data.body)
                 this.setState({

@@ -21,7 +21,7 @@ export default class ShowAll extends Component {
     }
 
     getFeaturedPlaylists = () => {
-        axios.get(`http://localhost:8080/api/all-playlists`)
+        axios.get(`http://localhost:8080/api/all-playlists`, { withCredentials: true })
             .then(responseFromAPI => {
                 this.setState({
                     playlists: responseFromAPI.data.featuredPlaylists,
@@ -38,7 +38,7 @@ export default class ShowAll extends Component {
             search: value.toLowerCase()
         });
         axios
-            .get(`http://localhost:8080/api/playlist-search?playlistSearch=${this.state.search}`)
+            .get(`http://localhost:8080/api/playlist-search?playlistSearch=${this.state.search}`, { withCredentials: true })
             .then(searchFromAPI => {
                 this.setState({
                     playlists: searchFromAPI.data.searchResults,
