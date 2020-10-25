@@ -18,9 +18,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client-side && npm run build",
-    "install-client": "cd client-side && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "client-install": "npm install --prefix client-side",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client-side && npm run build --prefix client-side",
     "start": "nodemon server"
   },
   "keywords": [],

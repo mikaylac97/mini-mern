@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express')
 const bodyParser = require('body-parser')
-const cors = require('cors')
+// const cors = require('cors')
 const path = require('path') 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -16,20 +16,20 @@ const PORT = process.env.PORT || 8080;
 //     origin: process.env.FRONTEND_POINT
 // }));
 
-const allowedOrigins = process.env.FRONTEND_POINT
-app.use(cors({
-  origin: function(origin, callback){
-    // allow requests with no origin
-    // (like mobile apps or curl requests)
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      let msg = 'The CORS policy for this site does not ' +
-        'allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  }
-}));
+// const allowedOrigins = process.env.FRONTEND_POINT
+// app.use(cors({
+//   origin: function(origin, callback){
+//     // allow requests with no origin
+//     // (like mobile apps or curl requests)
+//     if(!origin) return callback(null, true);
+//     if(allowedOrigins.indexOf(origin) === -1){
+//       let msg = 'The CORS policy for this site does not ' +
+//         'allow access from the specified Origin.';
+//       return callback(new Error(msg), false);
+//     }
+//     return callback(null, true);
+//   }
+// }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -62,6 +62,9 @@ app.use('/api', require('./routes/search'))
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client-side/build'))
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client-side', 'build', 'index.html'))
+    })
 }
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
