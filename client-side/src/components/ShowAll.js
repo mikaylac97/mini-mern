@@ -21,7 +21,7 @@ export default class ShowAll extends Component {
     }
 
     getFeaturedPlaylists = () => {
-        axios.get(`http://localhost:4000/api/all-playlists`)
+        axios.get(`http://localhost:8080/api/all-playlists`)
             .then(responseFromAPI => {
                 this.setState({
                     playlists: responseFromAPI.data.featuredPlaylists,
@@ -38,7 +38,7 @@ export default class ShowAll extends Component {
             search: value.toLowerCase()
         });
         axios
-            .get(`http://localhost:4000/api/playlist-search?playlistSearch=${this.state.search}`)
+            .get(`http://localhost:8080/api/playlist-search?playlistSearch=${this.state.search}`)
             .then(searchFromAPI => {
                 this.setState({
                     playlists: searchFromAPI.data.searchResults,
@@ -76,7 +76,7 @@ export default class ShowAll extends Component {
         console.log(creatorsNoDuplicates)    
         return (
             <div container>
-                <nav class='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
+                <nav className='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
                     <div className='container'>   
                     <Link to='/playlists' className="navbar-brand home-btn" onClick={() => window.location.reload()}><h3>Home</h3></Link>
                         <div className='search-bar'>
@@ -94,20 +94,20 @@ export default class ShowAll extends Component {
                         <h6 className='text-info'>Number of Tracks</h6>
                         <ul className='list-group'>
                             <li className='form-check'>
-                                <input type="checkbox" class="form-check-input" id="0-20" onClick={(e) => this.filterByNumberOfTracks(e, 0, 20)}/>
-                                <label class="form-check-label" for="0-20">0-20</label>
+                                <input type="checkbox" className="form-check-input" id="0-20" onClick={(e) => this.filterByNumberOfTracks(e, 0, 20)}/>
+                                <label className="form-check-label" >0-20</label>
                             </li>
                             <li className='form-check'>
-                                <input type="checkbox" class="form-check-input" id="21-50" onClick={(e) => this.filterByNumberOfTracks(e, 21, 50)} />
-                                <label class="form-check-label" for="21-50">21-50</label>
+                                <input type="checkbox" className="form-check-input" id="21-50" onClick={(e) => this.filterByNumberOfTracks(e, 21, 50)} />
+                                <label className="form-check-label" >21-50</label>
                             </li>
                             <li className='form-check'>
-                                <input type="checkbox" class="form-check-input" id="51-99" onClick={(e) => this.filterByNumberOfTracks(e, 51, 99)}/>
-                                <label class="form-check-label" for="51-99">51-99</label>
+                                <input type="checkbox" className="form-check-input" id="51-99" onClick={(e) => this.filterByNumberOfTracks(e, 51, 99)}/>
+                                <label className="form-check-label">51-99</label>
                             </li>
                             <li className='form-check'>
-                                <input type="checkbox" class="form-check-input" id="100" onClick={(e) => this.filterByNumberOfTracks(e, 100, 300)} />
-                                <label class="form-check-label" for="100">100+</label>
+                                <input type="checkbox" className="form-check-input" id="100" onClick={(e) => this.filterByNumberOfTracks(e, 100, 300)} />
+                                <label className="form-check-label" >100+</label>
                             </li>
                         </ul>
                     </div>
@@ -117,8 +117,8 @@ export default class ShowAll extends Component {
                         {creatorsNoDuplicates.map((creator, i) => {
                             return(
                                 <li className='form-check'>
-                                    <input type="checkbox" checked={this.state.boxIsChecked} class="form-check-input" id={`exampleCheck${i}`} onClick={(e) => this.filterByPlaylistCreators(e, creator)}/>
-                                    <label class="form-check-label" for={`exampleCheck${i}`}>{creator}</label>
+                                    <input type="checkbox" checked={this.state.boxIsChecked} className="form-check-input" id={`exampleCheck${i}`} onClick={(e) => this.filterByPlaylistCreators(e, creator)}/>
+                                    <label className="form-check-label" key={`exampleCheck${i}`}>{creator}</label>
                                 </li> 
                             )
                         })}

@@ -13,7 +13,7 @@ export default class Search extends Component {
             search: value.toLowerCase()
         });
         axios
-            .get(`http://localhost:4000/api/playlist-search?playlistSearch=${this.state.search}`)
+            .get(`http://localhost:8080/api/playlist-search?playlistSearch=${this.state.search}`)
             .then(searchFromApi => {
                 console.log({ searchResponse: searchFromApi.data })
                 this.setState({

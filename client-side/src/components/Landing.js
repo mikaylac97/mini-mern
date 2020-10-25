@@ -15,7 +15,7 @@ export class Landing extends Component {
                     </form>
                     
                 </nav> */}
-        <nav class='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
+        <nav className='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
             <div className='container'>
                 <a href='/' className='navbar-brand'>Mini Project</a>
                 <span>Spotify API</span>
@@ -94,14 +94,14 @@ export class Landing extends Component {
                                 <div className='row'>
                                     <div className='col-lg-6'>
                                         <div className='feature-item'>
-                                            <i class="fab fa-spotify"></i>
+                                            <i className="fab fa-spotify"></i>
                                             <h3>Spotify API</h3>
                                             <p className='text-muted'>App uses Spotify API to retrieve playlist, artist, album, and track information</p>
                                         </div>
                                     </div>
                                     <div className='col-lg-6'>
                                         <div className='feature-item'>
-                                        <i class="fab fa-npm"></i>
+                                        <i className="fab fa-npm"></i>
                                         <h3>Node API package</h3>
                                         <p className='text-muted'>Utilizes NPM's Spotify API Node package for search feature</p>
                                         </div>
@@ -110,14 +110,14 @@ export class Landing extends Component {
                                 <div className='row'>
                                     <div className='col-lg-6'>
                                         <div className='feature-item'>
-                                        <i class="fab fa-react"></i>
+                                        <i className="fab fa-react"></i>
                                         <h3>React</h3>
                                         <p className='text-muted'>Practice with using React components</p>
                                         </div>
                                     </div>
                                     <div className='col-lg-6'>
                                         <div className='feature-item'>
-                                        <i class="fas fa-external-link-alt"></i>
+                                        <i className="fas fa-external-link-alt"></i>
                                         <h3>External URLs</h3>
                                         <p className='text-muted'>App features external links to Spotify playlists, artists, albums, and tracks</p>
                                         </div>
@@ -147,12 +147,12 @@ export class Landing extends Component {
                     <ul className='list-inline list-social'>
                         <li className='list-inline-item social-github'>
                             <a href='https://github.com/mikaylac97/mini-project'>
-                                <i class="fab fa-github"></i>
+                                <i className="fab fa-github"></i>
                             </a>
                         </li>
                         <li className='list-inline-item social-linkedin'>
                             <a href='https://www.linkedin.com/in/mikaylacastro/'>
-                                <i class="fab fa-linkedin"></i>
+                                <i className="fab fa-linkedin"></i>
                             </a>
                         </li>
                     </ul>

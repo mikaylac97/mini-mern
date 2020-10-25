@@ -24,7 +24,7 @@ export default class Details extends Component {
     getSinglePlaylist = () => {
         const { params } = this.props.match;
         axios
-            .get(`http://localhost:4000/api/playlists/${params.id}`)
+            .get(`http://localhost:8080/api/playlists/${params.id}`)
             .then(responseFromAPI => {
                 console.log(responseFromAPI.data.body)
                 this.setState({
@@ -54,7 +54,7 @@ export default class Details extends Component {
         const descriptionNoCover = this.state.description.split('Cover')
         return (
         <div className='container-desktop'>
-                <nav class='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
+                <nav className='navbar navbar-expand-lg navbar-light fixed-top' id='mainNav'>
                     <div className='container'>
                     <Link to='/playlists' className="navbar-brand home-btn"><h3>Home</h3></Link>
                     </div>
