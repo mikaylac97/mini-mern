@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 8080;
 
 // MIDDLEWARE SETUP
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use(
   cors({
       credentials: true,
