@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.use(
   cors({
       credentials: true,
-      origin: ["http://localhost:3000", process.env.FRONTEND_POINT],
+      origin: process.env.FRONTEND_POINT
   })
 );
 
