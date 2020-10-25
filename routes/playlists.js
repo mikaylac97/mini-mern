@@ -16,7 +16,7 @@ spotifyApi
 
 
 router.get('/all-playlists', (req, res, next) => {
-    console.log('this is the query', req.query)
+    // console.log('this is the query', req.query)
     spotifyApi
     .getFeaturedPlaylists({
          limit : 9, 
@@ -30,7 +30,7 @@ router.get('/all-playlists', (req, res, next) => {
             featuredPlaylists: data.body.playlists.items
         })
     })
-    .catch(err => res.status(500).json({ message: "Error finding all tasks" }))
+    .catch(err => res.status(500).json({ message: "Error finding all playlists" }))
 })
 
 router.get('/playlists/:id', (req, res, next) => {
