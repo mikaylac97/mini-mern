@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express')
 const bodyParser = require('body-parser')
-// const cors = require('cors')
+const cors = require('cors')
 const path = require('path') 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -11,10 +11,10 @@ const PORT = process.env.PORT || 8080;
 
 // MIDDLEWARE SETUP
 
-// app.use(cors({
-//     credentials: true,
-//     origin: process.env.FRONTEND_POINT
-// }));
+app.use(cors({
+    credentials: true,
+    origin: process.env.FRONTEND_POINT
+}));
 
 // const allowedOrigins = process.env.FRONTEND_POINT
 // app.use(cors({
