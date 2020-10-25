@@ -62,7 +62,7 @@ spotifyApi.clientCredentialsGrant().then(
     }
   );
 
-app.use('/', require('./routes/index'))
+// app.use('/', require('./routes/index'))
 app.use('/api', require('./routes/playlists'))
 app.use('/api', require('./routes/search'))
 
