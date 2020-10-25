@@ -23,6 +23,7 @@ export default class ShowAll extends Component {
     getFeaturedPlaylists = () => {
         axios.get(`http://localhost:8080/api/all-playlists`, { withCredentials: true })
             .then(responseFromAPI => {
+                console.log(responseFromAPI)
                 this.setState({
                     playlists: responseFromAPI.data.featuredPlaylists,
                     savedPrevState: responseFromAPI.data.featuredPlaylists

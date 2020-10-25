@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const path = require('path') 
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const path = require('path'); 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.use(
   cors({
       credentials: true,
-      origin: process.env.FRONTEND_POINT
+      origin: ['http://localhost:3000', process.env.FRONTEND_POINT]
   })
 );
 
